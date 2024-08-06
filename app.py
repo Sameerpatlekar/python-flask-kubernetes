@@ -22,7 +22,7 @@ collection = db.data
 @app.route('/')
 def index():
 # Return a welcome message with the current time
-return f"Welcome to the Flask app! The current time is: {datetime.now()}"
+    return f"Welcome to the Flask app! The current time is: {datetime.now()}"
 
 # Define the route for the '/data' endpoint
 # This endpoint supports both GET and POST methods
