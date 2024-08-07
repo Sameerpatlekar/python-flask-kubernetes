@@ -1,4 +1,4 @@
-FROM python:3.9-slim
+FROM python:3.9
 
 WORKDIR /app
 
@@ -8,7 +8,7 @@ RUN pip install -r requirements.txt
 
 ENV FLASK_APP=app.py
 ENV FLASK_ENV=development
-ENV MONGODB_URI=mongodb://localhost:27017/
+ENV MONGODB_URI=mongodb://mongo:27017/flask_db
 
 EXPOSE 5000
 

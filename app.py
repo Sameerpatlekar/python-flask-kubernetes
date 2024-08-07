@@ -9,7 +9,7 @@ app = Flask(__name__)
 # Set up the MongoDB client
 # The MongoDB URI is fetched from the environment variable 'MONGODB_URI'
 # If not found, it defaults to 'mongodb://localhost:27017/'
-client = MongoClient(os.environ.get("MONGODB_URI", "mongodb://localhost:27017/"))
+client = MongoClient(os.environ.get("MONGODB_URI", "mongodb://mongo:27017/"))
 
 
 # Connect to the database named 'flask_db'
