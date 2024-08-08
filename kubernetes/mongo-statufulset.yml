@@ -23,12 +23,12 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: mongo # has to match .spec.template.metadata.labels
-  minReadySeconds: 10 # by default is 0
+      app: mongo 
+  minReadySeconds:
   template:
     metadata:
       labels:
-        app: mongo # has to match .spec.selector.matchLabels
+        app: mongo 
     spec:
       terminationGracePeriodSeconds: 10
       containers:
