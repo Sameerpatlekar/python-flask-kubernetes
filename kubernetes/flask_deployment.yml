@@ -33,7 +33,7 @@ metadata:
   name: myapp
   namespace: dev
 spec:
-  type: NodePort
+  type: clusterIP
   ports:
     - port: 5000
       targetPort: 5000

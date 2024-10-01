@@ -14,6 +14,19 @@ spec:
         backend:
           service:
             name: myapp
-            namespace: dev
             port:
               number: 80
+
+---
+apiVersion: networking.k8s.io/v1
+kind: IngressClass
+metadata:
+  name: lb-1
+spec:
+  controller: example.com/ingress-controller
+  parameters:
+    scope: Namespace
+    service: myapp
+    kind: IngressParameter
+    namespace: dev
+    name: my-ingress
