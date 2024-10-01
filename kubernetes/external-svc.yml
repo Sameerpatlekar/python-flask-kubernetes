@@ -5,4 +5,4 @@ metadata:
   namespace: default
 spec:
   type: ExternalName
-  externalName: my-app-service.dev.svc.cluster.local
+  externalName: myapp.dev.svc.cluster.local
