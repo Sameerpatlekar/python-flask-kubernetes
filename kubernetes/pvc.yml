@@ -9,4 +9,4 @@ spec:
   resources:
     requests:
       storage: 1Gi  # Must match or be less than the PV's capacity
-  storageClassName: my-storage-class  # Must match the PV's storage class
+  storageClassName: gp2  # Must match the PV's storage class

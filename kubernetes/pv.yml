@@ -9,6 +9,6 @@ spec:
   accessModes:
     - ReadWriteOnce  # Access mode (RWO, ROX, RWX)
   persistentVolumeReclaimPolicy: Retain  # Policy for reclaiming the volume
-  storageClassName: my-storage-class  # Must match the storage class in your PVC
+  storageClassName: gp2  # Must match the storage class in your PVC
   hostPath:  # Example for hostPath (use for testing, not recommended for production)
     path: /data/db  # Path on the host (only for testing)
