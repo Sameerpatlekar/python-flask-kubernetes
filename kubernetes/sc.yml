@@ -1,3 +1,4 @@
+#this manifest file for minikube deployment
 apiVersion: storage.k8s.io/v1
 kind: StorageClass
 metadata:
