@@ -15,5 +15,5 @@ spec:
           service: 
             name: my-app-service
             port:
-              number: 5000
+              number: 80
 
