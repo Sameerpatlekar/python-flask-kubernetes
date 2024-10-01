@@ -41,14 +41,13 @@ spec:
         - containerPort: 27017
           name: mongo
         volumeMounts:
-        - name: mongo-pvc
+        - name: ebs-claim
           mountPath: /data/db
   volumeClaimTemplates:
   - metadata:
-      name: mongo-pvc
+      name: ebs-claim
     spec:
       accessModes: ["ReadWriteOnce"]
-      storageClassName: mongo-storage
       resources:
         requests:
-          storage: 0.5Gi
+          storage: 1Gi

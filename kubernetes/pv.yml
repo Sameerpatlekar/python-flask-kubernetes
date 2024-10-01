@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: ebs-claim      # Name of the PVC
+  namespace: dev       # Namespace where PVC will be created
+spec:                  # Start of the specification for the PVC
+  accessModes:
+    - ReadWriteOnce    # Access mode for the volume (can be mounted as read-write by a single node)
+  resources:
+    requests:
+      storage: 10Gi    # Requested storage size (10 GiB in this case)
