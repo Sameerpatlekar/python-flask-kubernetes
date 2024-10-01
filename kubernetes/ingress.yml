@@ -1,18 +1,19 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: minimal-ingress
+  name: my-ingress
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
+  ingressClassName: nginx
   rules:
-    http:
+  - http:
       paths:
       - path: /
         pathType: Prefix
         backend:
           service:
             name: myapp
-            namespace: dev # Reference to the service in dev namespace
+            namespace: dev
             port:
-              number: 5000
+              number: 80
