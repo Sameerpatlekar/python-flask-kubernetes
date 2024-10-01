@@ -12,21 +12,8 @@ spec:
       - path: /
         pathType: Prefix
         backend:
-          service:
-            name: myapp
+          service: 
+            name: my-app-service
             port:
-              number: 80
+              number: 5000
 
----
-apiVersion: networking.k8s.io/v1
-kind: IngressClass
-metadata:
-  name: lb-1
-spec:
-  controller: example.com/ingress-controller
-  parameters:
-    scope: Namespace
-    service: myapp
-    kind: IngressParameter
-    namespace: dev
-    name: my-ingress
