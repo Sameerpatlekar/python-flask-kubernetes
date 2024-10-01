@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: my-pvc  # Name of your PVC
+  namespace: dev  # Namespace where you want to create the PVC
+spec:
+  accessModes:
+    - ReadWriteOnce  # Must match the PV's access mode
+  resources:
+    requests:
+      storage: 1Gi  # Must match or be less than the PV's capacity
+  storageClassName: my-storage-class  # Must match the PV's storage class

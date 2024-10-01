@@ -41,11 +41,11 @@ spec:
         - containerPort: 27017
           name: mongo
         volumeMounts:
-        - name: ebs-claim
+        - name: my-pvc
           mountPath: /data/db
   volumeClaimTemplates:
   - metadata:
-      name: ebs-claim
+      name: my-pvc
     spec:
       accessModes: ["ReadWriteOnce"]
       resources:
