@@ -1,20 +1,18 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: my-app-ingress
-  namespace: default
+  name: my-ingress
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   ingressClassName: nginx
   rules:
-  - host: myapp.example.com
-    http:
+  - http:
       paths:
       - path: /
         pathType: Prefix
         backend:
           service:
-            name: myapp   # The service name
+            name: myapp
             port:
-              number: 80           # The port exposed by the service (which maps to port 5000)
+              number: 80

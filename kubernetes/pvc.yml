@@ -2,7 +2,7 @@ apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: my-pvc  # Name of your PVC
-  namespace: dev  # Namespace where you want to create the PVC
+  #namespace: dev  # Namespace where you want to create the PVC
 spec:
   accessModes:
     - ReadWriteOnce  # Must match the PV's access mode
