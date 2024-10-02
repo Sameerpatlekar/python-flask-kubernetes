@@ -33,7 +33,7 @@ metadata:
   name: myapp
 #  namespace: dev
 spec:
-  type: clusterIP
+  type: ClusterIP
   ports:
     - port: 80
       targetPort: 5000
